@@ -36,7 +36,7 @@ export default function ArticlePage({ article }: { article: Article }) {
           {
             article.image ? 
               <img
-                src={article.image || 'https://via.placeholder.com/600x400'}
+                src={article.image}
                 alt="Coffee brewing"
                 className="w-full h-80 object-cover brightness-95 hover:brightness-100 transition"
               />

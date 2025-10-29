@@ -12,7 +12,7 @@ export default function Featured({ article }: { article: Article }) {
           <a href={`/article/${article.id}`}>
             {article.image ? (
               <img
-                src={article.image || "https://via.placeholder.com/150"}
+                src={article.image}
                 alt="Featured Coffee"
                 className="w-full h-72 object-cover brightness-75 group-hover:brightness-90 transition"
               />

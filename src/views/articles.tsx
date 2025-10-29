@@ -21,7 +21,7 @@ export const ArticlesGrid = ({ articles }: ArticlesGridProps) => {
           <div className="relative h-48 w-full overflow-hidden rounded-xl">
             {article.image ? (
               <img
-                src={article.image || "https://via.placeholder.com/150"}
+                src={article.image}
                 alt={article.title}
                 className="object-cover w-full h-full hover:scale-105 transition-transform duration-500"
               />
