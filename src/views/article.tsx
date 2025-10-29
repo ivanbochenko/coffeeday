@@ -12,7 +12,7 @@ interface Article {
 export default function ArticlePage({ article }: { article: Article }) {
   return (
     <main
-      className="min-h-screen bg-[var(--bg)] text-white px-6 py-12 flex justify-center"
+      className="min-h-screen text-white px-6 py-12 flex justify-center"
       style={{ fontFamily: "Inter, sans-serif" }}
     >
       <article className="max-w-3xl w-full bg-[var(--card)] rounded-[28px] p-8 shadow-[0_8px_24px_rgba(0,0,0,0.5)] border border-[rgba(255,255,255,0.05)]">
