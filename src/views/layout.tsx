@@ -2,7 +2,7 @@ import type { FC } from 'hono/jsx'
 
 export const Layout: FC = (props) => {
   const css = `:root {
-        --border: rgba(255,255,255,0.03);
+        --border: rgba(255,255,255,0.05);
         --bg: #15171b;     /* lighter page background */
         --card: #1c1e22;   /* brighter, smoother card tone */
         --nav-item: rgba(255, 255, 255, 0.05);
@@ -10,6 +10,7 @@ export const Layout: FC = (props) => {
         --accent: #6fb3ff;
         --accent-light: #4dd0e1;
         --muted: #888888;
+
       }
       html,body { background: var(--bg); }`
   return (
@@ -51,15 +52,15 @@ const navbar = () => (
 
       {/* center: nav items */}
       <div class="hidden md:flex items-center gap-6">
-        <a href="/" class="flex items-center gap-2 py-2 px-3 rounded-full bg-[var(--nav-item)] hover:bg-[var(--nav-item-hover)] transition">
+        <a href="/article" class="flex items-center gap-2 py-2 px-3 rounded-full bg-[var(--nav-item)] hover:bg-[var(--nav-item-hover)] transition">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M3 10.5L12 4l9 6.5V20a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1V10.5z"/></svg>
           <span class="text-sm text-gray-200">Home</span>
         </a>
 
-        <button class="flex items-center gap-2 py-2 px-3 rounded-full bg-[var(--nav-item)] hover:bg-[var(--nav-item-hover)] transition">
+        <a href="/article/new" class="flex items-center gap-2 py-2 px-3 rounded-full bg-[var(--nav-item)] hover:bg-[var(--nav-item-hover)] transition">
           <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M12 5v14M5 12h14" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
           <span class="text-sm text-gray-200">Add Article</span>
-        </button>
+        </a>
 
         <button class="flex items-center gap-2 py-2 px-3 rounded-full bg-[var(--nav-item)] hover:bg-[var(--nav-item-hover)] transition">
           <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M12 8v4l3 3" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><circle cx="12" cy="12" r="9" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>

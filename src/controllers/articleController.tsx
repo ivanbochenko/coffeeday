@@ -1,6 +1,7 @@
 import * as Article from "../models/articleModel";
 import ArticlePage from "../views/article";
 import { ArticlesGrid } from "../views/articles";
+import { CreateArticleCard } from "../views/CreateArticleCard";
 import Featured from "../views/Featured";
 import { Layout } from "../views/layout";
 
@@ -25,21 +26,39 @@ export async function showArticle(c) {
   return c.html(<Layout><ArticlePage article={article} /></Layout>);
 }
 
+export async function createArticleForm(c) {
+  return c.html(
+    <Layout>
+      <CreateArticleCard />
+    </Layout>
+  );
+}
+
 export async function createArticle(c) {
   const body = await c.req.parseBody();
+  
   await Article.createArticle({
     title: body.title,
     content: body.content,
     author: body.author,
   });
 
-  return c.redirect("/articles");
+  return c.html(
+    <div className="text-green-500 font-semibold">
+      Article created successfully! ☕
+    </div>
+  );
 }
 
 export async function deleteArticle(c) {
   const id = Number(c.req.param("id"));
   await Article.deleteArticle(id);
-  return c.redirect("/articles");
+  
+  return c.html(
+    <div className="text-red-500 font-semibold">
+      Article deleted successfully! ☕
+    </div>
+  );
 }
 
 export async function showMain(c) {

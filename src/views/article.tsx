@@ -1,3 +1,5 @@
+import DeleteArticleButton from "./DeleteArticle";
+
 interface Article {
   id: number;
   title: string;
@@ -9,21 +11,24 @@ interface Article {
 
 export default function ArticlePage({ article }: { article: Article }) {
   return (
-    <main
-      className="min-h-screen text-white px-6 py-12 flex justify-center"
+    <section
+      className="min-h-screen text-white p-6 flex justify-center"
       style={{ fontFamily: "Inter, sans-serif" }}
     >
-      <article className="max-w-3xl w-full bg-[var(--card)] rounded-[28px] p-8 shadow-[0_8px_24px_rgba(0,0,0,0.5)] border border-[rgba(255,255,255,0.05)]">
+      <article className="article-card max-w-3xl w-full bg-[var(--card)] rounded-[28px] p-8 shadow-[0_8px_24px_rgba(0,0,0,0.5)] border border-[var(--border)]">
         {/* Header */}
-        <header className="mb-8">
-          <h1 className="text-4xl font-semibold leading-tight mb-3">
-            {article.title}
-          </h1>
-          <div className="flex items-center gap-3 text-sm text-[var(--muted)]">
-            <span>by <span className="text-white">{article.author ?? 'Kaligorsky'}</span></span>
-            <span>•</span>
-            <span>{new Date(article.createdAt).toLocaleDateString()}</span>
+        <header className="mb-8 flex flex-row justify-between">
+          <div className="">
+            <h1 className="text-4xl font-semibold leading-tight mb-3">
+              {article.title}
+            </h1>
+            <div className="flex items-center gap-3 text-sm text-[var(--muted)]">
+              <span>by <span className="text-white">{article.author ?? 'Kaligorsky'}</span></span>
+              <span>•</span>
+              <span>{new Date(article.createdAt).toLocaleDateString()}</span>
+            </div>
           </div>
+          <DeleteArticleButton id={article.id} />
         </header>
 
         {/* Featured image */}
@@ -56,7 +61,7 @@ export default function ArticlePage({ article }: { article: Article }) {
           </a>
         </footer>
       </article>
-    </main>
+    </section>
   );
 }
 
