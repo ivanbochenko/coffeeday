@@ -27,7 +27,7 @@ export const Layout: FC = (props) => {
       <body class="h-full min-h-screen antialiased text-white font-inter">
         { navbar() }
         {/* MAIN */}
-        <main class="mx-auto h-full px-6 py-8 space-y-8 max-w-6xl">
+        <main class="mx-auto h-full py-8 space-y-8 max-w-6xl">
           { props.children }
         </main>
       </body>
@@ -37,7 +37,7 @@ export const Layout: FC = (props) => {
 
 const navbar = () => (
   <nav class="sticky top-0 z-50 backdrop-blur-md w-full">
-    <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between gap-6">
+    <div class="max-w-6xl mx-auto py-4 flex items-center justify-between gap-6">
       {/* left: logo */}
       <div class="flex items-center gap-4">
         <div class="w-10 h-10 rounded-2xl bg-gradient-to-br from-[var(--accent-light)] to-[var(--accent)] flex items-center justify-center font-extrabold text-black">
