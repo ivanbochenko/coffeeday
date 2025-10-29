@@ -1,5 +1,3 @@
-import { html, raw } from 'hono/html'
-
 interface Article {
   id: number;
   title: string;
@@ -30,11 +28,16 @@ export default function ArticlePage({ article }: { article: Article }) {
 
         {/* Featured image */}
         <div className="rounded-[24px] overflow-hidden mb-10">
-          <img
-            src={article.image || 'https://via.placeholder.com/600x400'}
-            alt="Coffee brewing"
-            className="w-full h-80 object-cover brightness-95 hover:brightness-100 transition"
-          />
+          {
+            article.image ? 
+              <img
+                src={article.image || 'https://via.placeholder.com/600x400'}
+                alt="Coffee brewing"
+                className="w-full h-80 object-cover brightness-95 hover:brightness-100 transition"
+              />
+            :
+              <img alt="placeholder" src="data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 400'%3E%3Crect width='100%25' height='100%25' fill='%23efefef' rx='8' ry='8'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' fill='%23999' font-family='system-ui, Arial' font-size='28'%3E600%C3%97400%3C/text%3E%3C/svg%3E" />
+          }
         </div>
 
         {/* Content */}
@@ -57,7 +60,7 @@ export default function ArticlePage({ article }: { article: Article }) {
   );
 }
 
-function formatTextWithQuote(text) {
+function formatTextWithQuote(text: string) {
   // Split into sentences
   const sentences = text.match(/[^.!?]+[.!?]/g) || [text];
 

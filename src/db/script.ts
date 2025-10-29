@@ -56,8 +56,8 @@ export const articles = [
 (async () => {
   for (const a of articles) {
     await db.update(articlesTable)
-      .set({ content: a.content })
-      .where(eq(articlesTable.id, a.id));
+      .set({ image: '' })
+      .where(eq(articlesTable.id, 8));
   }
   console.log("✅ Updated article contents");
 })();
