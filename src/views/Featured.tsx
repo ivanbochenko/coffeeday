@@ -7,7 +7,7 @@ interface Article {
 
 export default function Featured({ article }: { article: Article }) {
   return (
-      <section className="max-w-6xl mx-auto px-6 mb-12">
+      <section className="max-w-6xl mx-auto">
         <div className="relative rounded-[28px] overflow-hidden shadow-lg group">
           <a href={`/article/${article.id}`}>
             <img
