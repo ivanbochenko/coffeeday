@@ -13,7 +13,7 @@ export const Layout: FC = (props) => {
       }
       html,body { background: var(--bg); }`
   return (
-    <html lang="en" class="dark">
+    <html lang="en">
       <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width,initial-scale=1" />
