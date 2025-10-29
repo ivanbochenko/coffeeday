@@ -24,7 +24,7 @@ export const Layout: FC = (props) => {
         <script src="https://cdn.tailwindcss.com"></script>
         <style>{css}</style>
       </head>
-      <body class="min-h-screen antialiased text-white font-inter">
+      <body class="min-h-screen h-full antialiased text-white font-inter">
         { navbar() }
         {/* MAIN */}
         <main class="mx-auto h-full px-6 py-8 space-y-8]">
