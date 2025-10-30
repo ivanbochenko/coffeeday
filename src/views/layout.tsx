@@ -72,9 +72,9 @@ const Navbar = () => (
 
       {/* right: profile / actions */}
       <div class="flex items-center gap-3">
-        <button class="hidden sm:inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[var(--nav-item)] hover:bg-[var(--nav-item-hover)] transition text-sm">
+        <a href='/login/new' class="hidden sm:inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[var(--nav-item)] hover:bg-[var(--nav-item-hover)] transition text-sm">
           Create account
-        </button>
+        </a>
 
         <div class="flex items-center gap-3">
           <div class="w-10 h-10 rounded-full bg-[linear-gradient(135deg,var(--accent-light),var(--accent))] flex items-center justify-center text-black font-bold">DK</div>
