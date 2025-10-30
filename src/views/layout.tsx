@@ -10,6 +10,7 @@ export const Layout: FC = (props) => {
         --accent: #6fb3ff;
         --accent-light: #4dd0e1;
         --muted: #888888;
+        --input: var(--nav-item);
 
       }
       html,body { background: var(--bg); }`
@@ -28,7 +29,7 @@ export const Layout: FC = (props) => {
       <body class="flex flex-col min-h-screen antialiased text-white font-inter">
         <Navbar />
         {/* MAIN */}
-        <main class="flex flex-col flex-grow justify-center py-8 space-y-8">
+        <main class="flex flex-col items-start flex-grow py-8 space-y-8">
           { props.children }
         </main>
         <Footer />
@@ -93,14 +94,14 @@ const Footer = () => {
         </p>
 
         <div className="flex items-center gap-4 text-sm">
-          <a href="/about" className="hover:text-[var(--accent)] transition">
+          <a href="/info/about" className="hover:text-[var(--accent)] transition">
             About
           </a>
-          <a href="/contact" className="hover:text-[var(--accent)] transition">
+          <a href="/info/contact" className="hover:text-[var(--accent)] transition">
             Contact
           </a>
-          <a href="/privacy" className="hover:text-[var(--accent)] transition">
-            Privacy
+          <a href="/info/terms" className="hover:text-[var(--accent)] transition">
+            Terms
           </a>
         </div>
       </div>
