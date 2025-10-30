@@ -28,7 +28,7 @@ export const Layout: FC = (props) => {
       <body class="flex flex-col min-h-screen antialiased text-white font-inter">
         <Navbar />
         {/* MAIN */}
-        <main class="flex-grow justify-center mx-auto py-8 space-y-8 max-w-6xl">
+        <main class="flex flex-col flex-grow justify-center py-8 space-y-8">
           { props.children }
         </main>
         <Footer />

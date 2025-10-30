@@ -12,7 +12,7 @@ interface ArticlesGridProps {
 
 export const ArticlesGrid = ({ articles }: ArticlesGridProps) => {
   return (
-    <section className="max-w-6xl mx-auto py-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+    <section className="w-full max-w-6xl mx-auto py-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
       {articles.map((article, i) => (
         <article
           key={i}

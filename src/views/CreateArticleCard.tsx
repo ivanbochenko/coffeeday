@@ -1,8 +1,7 @@
 
 export const CreateArticleCard = () => {
   return (
-    <section className="w-full min-w-[600px] rounded-2xl shadow-lg p-6 bg-[var(--card)] border border-[var(--border)]"
-    >
+    <section className="w-full max-w-3xl mx-auto rounded-2xl shadow-lg p-6 bg-[var(--card)] border border-[var(--border)]">
       <h1 className="text-2xl font-semibold mb-2 text-center">
         Create New Article ☕
       </h1>
@@ -14,7 +13,7 @@ export const CreateArticleCard = () => {
         className="flex flex-col space-y-4"
       >
         <div>
-          <label className="block text-sm text-[var(--muted)] mb-1">
+          <label className="text-sm text-[var(--muted)] mb-1">
             Title
           </label>
           <input
@@ -29,7 +28,7 @@ export const CreateArticleCard = () => {
         </div>
 
         <div>
-          <label className="block text-sm text-[var(--muted)] mb-1">
+          <label className="text-sm text-[var(--muted)] mb-1">
             Author
           </label>
           <input
@@ -44,7 +43,7 @@ export const CreateArticleCard = () => {
         </div>
 
         <div>
-          <label className="block text-sm text-[var(--muted)] mb-1">
+          <label className="text-sm text-[var(--muted)] mb-1">
             Picture Link
           </label>
           <input
@@ -58,7 +57,7 @@ export const CreateArticleCard = () => {
         </div>
 
         <div>
-          <label className="block text-sm text-[var(--muted)] mb-1">
+          <label className="text-sm text-[var(--muted)] mb-1">
             Content
           </label>
           <textarea
