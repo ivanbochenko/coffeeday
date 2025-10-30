@@ -15,6 +15,20 @@
       "when": 1761660560825,
       "tag": "0001_sour_junta",
       "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "6",
+      "when": 1761808845213,
+      "tag": "0002_violet_power_man",
+      "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "6",
+      "when": 1761809042535,
+      "tag": "0003_ordinary_namorita",
+      "breakpoints": true
     }
   ]
 }

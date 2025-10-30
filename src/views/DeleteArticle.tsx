@@ -9,7 +9,7 @@ export default function DeleteArticleButton({ id }: DeleteArticleButtonProps) {
       hx-confirm="Are you sure you want to delete this article?"
       hx-target="closest .article-card"
       hx-swap="outerHTML"
-      className="px-3 py-1.5 h-10 rounded-xl bg-[#b23b3b] text-[#fff] text-sm font-medium opacity-50 hover:opacity-90 transition flex items-center gap-1"
+      className="flex items-center gap-1 ml-3 px-3 py-1.5 h-10 rounded-xl bg-[#b23b3b] text-sm opacity-50 hover:opacity-90 transition"
     >
       Delete
       <svg

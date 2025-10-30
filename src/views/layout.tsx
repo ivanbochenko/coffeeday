@@ -26,17 +26,18 @@ export const Layout: FC = (props) => {
         <style>{css}</style>
       </head>
       <body class="h-full min-h-screen antialiased text-white font-inter">
-        { navbar() }
+        <Navbar />
         {/* MAIN */}
         <main class="mx-auto h-full py-8 space-y-8 max-w-6xl">
           { props.children }
         </main>
+        <Footer />
       </body>
     </html>
   )
 }
 
-const navbar = () => (
+const Navbar = () => (
   <nav class="sticky top-0 z-50 backdrop-blur-md w-full">
     <div class="max-w-6xl mx-auto py-4 flex items-center justify-between gap-6">
       {/* left: logo */}
@@ -81,3 +82,28 @@ const navbar = () => (
     </div>
   </nav>
 )
+
+const Footer = () => {
+  return (
+    <footer className="w-full border-t border-[var(--border)] text-[var(--muted)] mt-6">
+      <div className="max-w-5xl mx-auto px-6 py-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+        <p className="text-sm">
+          © {new Date().getFullYear()} <span className="font-medium">CoffeeDay</span>.  
+          Brewed fresh daily ☕
+        </p>
+
+        <div className="flex items-center gap-4 text-sm">
+          <a href="/about" className="hover:text-[var(--accent)] transition">
+            About
+          </a>
+          <a href="/contact" className="hover:text-[var(--accent)] transition">
+            Contact
+          </a>
+          <a href="/privacy" className="hover:text-[var(--accent)] transition">
+            Privacy
+          </a>
+        </div>
+      </div>
+    </footer>
+  );
+}
