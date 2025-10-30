@@ -42,7 +42,7 @@ const Navbar = () => (
   <nav class="sticky top-0 z-50 backdrop-blur-md w-full">
     <div class="max-w-6xl mx-auto py-4 flex items-center justify-between gap-6">
       {/* left: logo */}
-      <div class="flex items-center gap-4">
+      <a href='/' class="flex items-center gap-4">
         <div class="w-10 h-10 rounded-2xl bg-gradient-to-br from-[var(--accent-light)] to-[var(--accent)] flex items-center justify-center font-extrabold text-black">
           C
         </div>
@@ -50,7 +50,7 @@ const Navbar = () => (
           <div class="text-sm text-gray-300 font-semibold">COFFEEDAY</div>
           <div class="text-xs text-[var(--muted)] -mt-0.5">beta</div>
         </div>
-      </div>
+      </a>
 
       {/* center: nav items */}
       <div class="hidden md:flex items-center gap-6">
