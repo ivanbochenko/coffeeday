@@ -25,10 +25,10 @@ export const Layout: FC = (props) => {
         <script src="https://cdn.tailwindcss.com"></script>
         <style>{css}</style>
       </head>
-      <body class="h-full min-h-screen antialiased text-white font-inter">
+      <body class="flex flex-col min-h-screen antialiased text-white font-inter">
         <Navbar />
         {/* MAIN */}
-        <main class="mx-auto h-full py-8 space-y-8 max-w-6xl">
+        <main class="flex-grow justify-center mx-auto py-8 space-y-8 max-w-6xl">
           { props.children }
         </main>
         <Footer />
