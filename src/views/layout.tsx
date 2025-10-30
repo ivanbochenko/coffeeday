@@ -29,7 +29,7 @@ export const Layout: FC = (props) => {
       <body class="flex flex-col min-h-screen antialiased text-white font-inter">
         <Navbar />
         {/* MAIN */}
-        <main class="flex flex-col items-start flex-grow py-8 space-y-8">
+        <main class="flex flex-col items-start flex-grow p-8 sm:p-4 space-y-8">
           { props.children }
         </main>
         <Footer />
